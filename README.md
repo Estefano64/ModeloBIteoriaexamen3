@@ -1,14 +1,44 @@
-# Predicción de Tendencias de Hashtags
+# Modelos de Business Intelligence - Predicción con Machine Learning
 
-## Descripción del Proyecto
+Este repositorio contiene dos proyectos de predicción usando Machine Learning y Regresión Lineal.
 
-Este proyecto implementa un sistema de **predicción de tendencias de hashtags** utilizando técnicas de Machine Learning (Regresión Lineal) para ayudar a marcas y creadores de contenido a identificar qué hashtags van a explotar en popularidad.
+---
 
-## Problema Real
+## 🥇 Proyecto Principal: Predicción del Precio del Oro
+
+### Descripción
+
+Sistema de **predicción del precio del oro** utilizando datos REALES de Yahoo Finance y técnicas de Machine Learning. Permite predecir el precio del oro para el próximo lunes y verificar la precisión de la predicción.
+
+### Problema Real
+
+**¿Cuál será el precio del oro el próximo lunes? ¿Vale la pena invertir ahora?**
+
+Los inversionistas necesitan saber si el precio del oro va a subir o bajar para tomar decisiones informadas de compra/venta. Este proyecto proporciona predicciones basadas en datos históricos reales y verificables.
+
+### ✅ Ventajas de Este Proyecto
+
+- **Datos REALES**: Descarga automática desde Yahoo Finance
+- **Verificable**: Puedes comprobar el lunes si acertó
+- **Actualizado**: Datos hasta el día actual
+- **Profesional**: Análisis completo con múltiples métricas
+- **Sin costos**: API gratuita sin límites
+
+---
+
+## 📊 Proyecto Alternativo: Predicción de Tendencias de Hashtags
+
+### Descripción
+
+Sistema de **predicción de tendencias de hashtags** utilizando técnicas de Machine Learning (Regresión Lineal) para ayudar a marcas y creadores de contenido a identificar qué hashtags van a explotar en popularidad.
+
+### Problema Real
 
 **¿Cuál hashtag va a explotar la próxima semana? ¿Vale la pena invertir contenido ahí?**
 
 Las marcas necesitan saber en qué hashtags invertir su tiempo y recursos ANTES que la competencia. Este proyecto proporciona predicciones basadas en datos para tomar decisiones estratégicas.
+
+**Nota**: Este proyecto usa datos sintéticos (simulados) para demostración.
 
 ## Características del Proyecto
 
@@ -32,13 +62,146 @@ Las marcas necesitan saber en qué hashtags invertir su tiempo y recursos ANTES 
 - Incremento de actividad durante eventos especiales
 - Recomendaciones de timing para publicaciones
 
-## Estructura del Proyecto
+---
+
+## 📁 Estructura del Proyecto
 
 ```
 ModeloBIteoriaexamen3/
-├── prediccion_hashtags.ipynb    # Notebook principal con análisis completo
+├── prediccion_oro.ipynb         # 🥇 Proyecto principal - Predicción precio del oro
+├── prediccion_hashtags.ipynb    # 📊 Proyecto alternativo - Tendencias hashtags
 └── README.md                     # Este archivo
 ```
+
+---
+
+# 🥇 PROYECTO PRINCIPAL: Predicción del Precio del Oro
+
+## Características
+
+### 1. Datos Reales en Tiempo Real
+- Descarga automática desde **Yahoo Finance**
+- Símbolo: **GC=F** (Gold Futures)
+- Período: Últimos 6 meses hasta HOY
+- Sin necesidad de API keys
+
+### 2. Análisis Completo
+- **Exploración de Datos**: Precio, volumen, retornos
+- **Medias Móviles**: 7 y 30 días
+- **Volatilidad**: Análisis de riesgo
+- **Tendencias**: Corto, medio y largo plazo
+
+### 3. Modelo de Machine Learning
+- **Algoritmo**: Regresión Lineal
+- **Características**: 8 variables predictoras
+- **Métricas**: R², RMSE, MAE
+- **Validación**: Split 80-20
+
+### 4. Predicción Verificable
+- Predice precio del **próximo lunes**
+- Predicciones para 7 días futuros
+- Dashboard visual completo
+- **¡Puedes verificar el lunes si acertó!**
+
+### 5. Análisis de Factores
+- Inflación y tasas de interés
+- Valor del dólar
+- Incertidumbre geopolítica
+- Oferta y demanda
+
+## Contenido del Notebook de Oro
+
+1. **Instalación e Importación** de librerías
+2. **Descarga de Datos Reales** con yfinance
+3. **Exploración de Datos (EDA)** con visualizaciones
+4. **Preparación de Datos** (medias móviles, volatilidad)
+5. **Modelo de Regresión Lineal** con evaluación
+6. **🎯 PREDICCIÓN PARA EL LUNES** ← LO MÁS IMPORTANTE
+7. **Análisis de Tendencias** (7, 30, 90 días)
+8. **Factores que Afectan el Oro**
+9. **Dashboard Resumen** visual completo
+10. **Resumen y Recomendaciones**
+11. **Guardar Predicción** para verificación
+
+## Cómo Usar el Proyecto del Oro
+
+### 1. Instalar dependencias
+
+```bash
+pip install yfinance pandas numpy matplotlib seaborn scikit-learn jupyter
+```
+
+### 2. Ejecutar el notebook
+
+```bash
+jupyter notebook prediccion_oro.ipynb
+```
+
+### 3. Ejecutar todas las celdas
+
+El notebook descargará automáticamente los datos más recientes y generará la predicción para el próximo lunes.
+
+### 4. Verificar el lunes
+
+Guarda la predicción y el lunes compara con el precio real en:
+- [Yahoo Finance - Gold](https://finance.yahoo.com/quote/GC=F/)
+- [Investing.com - Gold](https://www.investing.com/commodities/gold)
+
+## Resultados que Obtendrás
+
+### Predicción del Lunes
+```
+🎯 PRECIO PREDICHO PARA EL LUNES: $2,XXX.XX USD
+📈 Tendencia: SUBIDA/BAJADA
+✅ Recomendación: COMPRAR/VENDER/ESPERAR
+```
+
+### Métricas del Modelo
+- **R² Score**: Qué tan bien predice (0-1, mejor cerca de 1)
+- **RMSE**: Error promedio en dólares
+- **MAE**: Error absoluto medio
+
+### Visualizaciones
+- Evolución histórica del precio
+- Predicción vs datos reales
+- Medias móviles
+- Distribución de retornos
+- Tendencias por período
+- Dashboard completo
+
+## Ejemplo de Uso Real
+
+**Caso práctico del lunes:**
+
+1. **Hoy (antes del lunes)**:
+   - Ejecutas el notebook
+   - Obtienes predicción: "$2,050.00 USD"
+   - Recomendación: "COMPRAR (se espera subida del 1.5%)"
+
+2. **El lunes**:
+   - Revisas precio real del oro
+   - Comparas con predicción
+   - Calculas precisión del modelo
+
+3. **Resultado**:
+   - Si acertó dentro de $20-30: ¡Excelente modelo!
+   - Si la tendencia fue correcta: Modelo útil para decisiones
+
+## Por Qué Este Proyecto es Mejor para tu Examen
+
+✅ **Datos Reales**: No son simulados, son del mercado real
+✅ **Verificable**: El lunes puedes demostrar si funcionó
+✅ **Profesional**: Análisis de nivel financiero
+✅ **Sin Costos**: API gratuita
+✅ **Actualizado**: Datos hasta hoy
+✅ **Impactante**: Predecir el futuro impresiona más
+✅ **Aplicable**: Se usa en el mundo real de inversiones
+
+---
+
+# 📊 PROYECTO ALTERNATIVO: Hashtags (Datos Sintéticos)
+
+## Estructura del Proyecto (Hashtags)
 
 ## Requisitos
 
@@ -160,9 +323,43 @@ Este tipo de análisis permite a las marcas:
 - **Optimizar recursos** evitando hashtags en declive
 - **Aprovechar eventos** para aumentar visibilidad
 
-## Autor
+---
 
-Proyecto creado como parte del examen de teoría - Modelo BI
+## 🎓 Información del Proyecto
+
+**Proyecto creado para**: Examen de Teoría - Modelos de Business Intelligence
+
+**Objetivo**: Demostrar la aplicación práctica de Machine Learning en predicción de datos del mundo real
+
+**Tecnologías**: Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, yfinance
+
+## 📝 Notas Importantes
+
+### Para el Proyecto del Oro (Principal):
+- Los datos son **100% reales** descargados de Yahoo Finance
+- La predicción es **verificable** el próximo lunes
+- No requiere API keys ni costos
+- Se actualiza automáticamente con los datos más recientes
+
+### Para el Proyecto de Hashtags (Alternativo):
+- Los datos son **sintéticos** (generados algorítmicamente)
+- Útil para demostración de conceptos
+- No verificable con datos reales
+
+## 🚀 Recomendación
+
+**Usa el proyecto del ORO (`prediccion_oro.ipynb`) para tu examen** porque:
+1. Datos reales y actuales
+2. Puedes verificar la predicción el lunes
+3. Más profesional e impactante
+4. Aplicación real en el mundo financiero
+
+## 📚 Recursos Adicionales
+
+- [Yahoo Finance API](https://finance.yahoo.com/)
+- [yfinance Documentation](https://pypi.org/project/yfinance/)
+- [Scikit-learn Documentation](https://scikit-learn.org/)
+- [Pandas Documentation](https://pandas.pydata.org/)
 
 ## Licencia
 
@@ -170,4 +367,4 @@ Este proyecto es de código abierto y está disponible para uso educativo y come
 
 ---
 
-**Nota**: Este es un proyecto educativo que demuestra el poder del análisis de datos y Machine Learning aplicado a redes sociales. Los datos sintéticos generados son representativos pero no reflejan tendencias reales actuales.
+**¡Buena suerte en tu examen! 🎓📊**
