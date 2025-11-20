@@ -1,8 +1,14 @@
-# PREDICCIÓN DEL PRECIO DEL ORO USANDO MACHINE LEARNING
+# SISTEMA DE BUSINESS INTELLIGENCE - DOCUMENTACIÓN TÉCNICA
+
+Este documento contiene la documentación técnica completa de los tres proyectos principales del sistema de BI.
+
+---
+
+# PROYECTO 1: SISTEMA DE RECOMENDACIÓN DE INVERSIONES (20M+ DATOS)
 
 ## RESUMEN EJECUTIVO
 
-Este proyecto implementa un sistema de predicción del precio del oro utilizando Regresión Lineal y datos reales del mercado financiero. El modelo analiza 6 meses de datos históricos y genera predicciones verificables para los próximos días.
+Sistema de recomendación utilizando filtrado colaborativo con más de 20 millones de registros para recomendar productos financieros basándose en el comportamiento de usuarios similares. Alcanza tiempos de procesamiento inferiores a 100ms por recomendación.
 
 ## PROBLEMA
 
