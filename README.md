@@ -27,7 +27,38 @@ Basado en **"A Programmer's Guide to Data Mining"** - Chapter 2 y técnicas de *
 
 ---
 
-### 🥈 2. Análisis de Sentimiento Financiero
+### 🥈 2. Análisis de Sentimiento - Minería de Arequipa (WEB SCRAPING)
+**Archivo:** `analisis_sentimiento_arequipa.ipynb`
+
+**⭐ PROYECTO DESTACADO - Análisis LOCAL con Web Scraping**
+
+Análisis de sentimiento enfocado en las **5 principales minas de Arequipa** utilizando **web scraping de noticias reales** y correlación con precios de metales.
+
+#### Características:
+- ✅ **Web Scraping**: Framework con BeautifulSoup para extraer noticias reales
+- ✅ **Enfoque LOCAL**: 5 minas principales de Arequipa
+  - **Cerro Verde** (cobre) - 500,000 TM/año
+  - **Caylloma** (plata) - Fortuna Silver Mines
+  - **Arcata** (plata/oro) - Hochschild Mining
+  - **Orcopampa** (oro) - Buenaventura
+  - **Inmaculada** (oro) - Hochschild Mining
+- ✅ **Análisis en español**: Palabras clave específicas del sector minero
+- ✅ **Noticias reales**: 15+ eventos basados en situación actual de Arequipa
+- ✅ **Indicadores económicos**:
+  - Canon minero (800M PEN anuales)
+  - Empleo (15,000+ trabajadores directos)
+  - PIB regional (35% del total)
+- ✅ **Correlación con precios reales**: Oro, Plata, Cobre (Yahoo Finance)
+- ✅ **Fuentes múltiples**: Gestión.pe, Diario Correo, RPP Noticias, La República
+
+#### Impacto Regional:
+- Arequipa es el **2do productor de cobre** del Perú
+- **35% del PIB regional** proviene de la minería
+- Canon minero financia desarrollo local
+
+---
+
+### 🥉 3. Análisis de Sentimiento Financiero General
 **Archivo:** `analisis_sentimiento.ipynb`
 
 Análisis de sentimiento de **noticias, redes sociales y foros** correlacionado con indicadores financieros para predicción de precios.
@@ -57,7 +88,7 @@ Análisis de sentimiento de **noticias, redes sociales y foros** correlacionado 
 
 ---
 
-### 🥉 3. Predicción del Precio del Oro (9M+ datos)
+### 4. Predicción del Precio del Oro (9M+ datos)
 **Archivo:** `prediccion_oro_9M.ipynb`
 
 Modelo de predicción multi-factor con **9+ millones de datos** combinando 18 factores económicos.
@@ -74,13 +105,16 @@ Modelo de predicción multi-factor con **9+ millones de datos** combinando 18 fa
 
 ```
 ModeloBIteoriaexamen3/
-├── sistema_recomendacion_20M.ipynb    # 🥇 Sistema de recomendación (20M+ datos)
-├── analisis_sentimiento.ipynb         # 🥈 Análisis de sentimiento
-├── prediccion_oro_9M.ipynb            # 🥉 Predicción multi-factor (9M+ datos)
-├── prediccion_oro.ipynb               # Predicción básica del oro
-├── prediccion_hashtags.ipynb          # Proyecto alternativo
-├── DOCUMENTACION.md                   # Documentación técnica
-└── README.md                          # Este archivo
+├── sistema_recomendacion_20M.ipynb       # 🥇 Sistema de recomendación (20M+ datos)
+├── analisis_sentimiento_arequipa.ipynb  # 🥈 ⭐ Análisis sentimiento AREQUIPA + Web Scraping
+├── analisis_sentimiento.ipynb            # 🥉 Análisis de sentimiento general
+├── prediccion_oro_9M.ipynb               # Predicción multi-factor (9M+ datos)
+├── prediccion_oro.ipynb                  # Predicción básica del oro
+├── prediccion_hashtags.ipynb             # Proyecto alternativo
+├── DOCUMENTACION_COMPLETA.md             # Documentación técnica completa
+├── RESUMEN_EJECUTIVO.md                  # Resumen para presentación
+├── VERIFICACION_COMPLETA.md              # Verificación de requisitos
+└── README.md                             # Este archivo
 ```
 
 ---
@@ -89,7 +123,7 @@ ModeloBIteoriaexamen3/
 
 ### Requisitos
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn yfinance scipy textblob jupyter
+pip install pandas numpy matplotlib seaborn scikit-learn yfinance scipy textblob jupyter beautifulsoup4 requests
 ```
 
 ### Ejecutar Notebooks
@@ -99,12 +133,17 @@ pip install pandas numpy matplotlib seaborn scikit-learn yfinance scipy textblob
 jupyter notebook sistema_recomendacion_20M.ipynb
 ```
 
-**2. Análisis de Sentimiento:**
+**2. Análisis de Sentimiento - Minería Arequipa (DESTACADO):**
+```bash
+jupyter notebook analisis_sentimiento_arequipa.ipynb
+```
+
+**3. Análisis de Sentimiento General:**
 ```bash
 jupyter notebook analisis_sentimiento.ipynb
 ```
 
-**3. Predicción Multi-Factor:**
+**4. Predicción Multi-Factor:**
 ```bash
 jupyter notebook prediccion_oro_9M.ipynb
 ```
