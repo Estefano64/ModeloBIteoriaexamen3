@@ -30,7 +30,7 @@
 
 ## 📊 ARCHIVOS DEL PROYECTO
 
-### Notebooks Principales (3)
+### Notebooks Principales (4)
 
 1. **sistema_recomendacion_20M.ipynb** 🥇
    - Sistema de recomendación financiera
@@ -39,15 +39,24 @@
    - 4 perfiles de inversión
    - Filtrado colaborativo completo
 
-2. **analisis_sentimiento.ipynb** 🥈
-   - Análisis multi-fuente de sentimiento
+2. **analisis_sentimiento_arequipa.ipynb** 🥈 ⭐ DESTACADO
+   - **Análisis LOCAL - Minería de Arequipa**
+   - **Web scraping de noticias reales**
+   - 5 minas principales (Cerro Verde, Caylloma, Arcata, Orcopampa, Inmaculada)
+   - Análisis de sentimiento en español
+   - Correlación con precios de oro, plata y cobre
+   - Impacto económico regional
+   - Canon minero, empleo, PIB de Arequipa
+
+3. **analisis_sentimiento.ipynb** 🥉
+   - Análisis multi-fuente de sentimiento general
    - Correlación con precios reales
    - USD/PEN (Tipo cambio Dólar/Sol)
    - Riesgo país (EMBI Spread)
    - Índice de confianza
    - Modelo predictivo (R² > 0.85)
 
-3. **prediccion_oro_9M.ipynb** 🥉
+4. **prediccion_oro_9M.ipynb**
    - Predicción multi-factor
    - 9M+ registros (datos por minuto)
    - 18 factores económicos
@@ -55,34 +64,39 @@
 
 ### Notebooks Adicionales (2)
 
-4. **prediccion_oro.ipynb**
+5. **prediccion_oro.ipynb**
    - Versión básica de predicción del oro
    - 180 días de datos históricos
    - Predicción verificable para el lunes
 
-5. **prediccion_hashtags.ipynb**
+6. **prediccion_hashtags.ipynb**
    - Proyecto alternativo
    - Predicción de tendencias de hashtags
    - Datos sintéticos
 
-### Documentación (3)
+### Documentación (4)
 
-6. **README.md**
+7. **README.md**
    - Documentación completa del proyecto
    - Instrucciones de instalación y uso
    - Estructura del repositorio
    - Aplicaciones prácticas
 
-7. **DOCUMENTACION_COMPLETA.md**
+8. **DOCUMENTACION_COMPLETA.md**
    - Documentación técnica detallada
    - Metodología de cada proyecto
    - Fórmulas matemáticas
    - Implementación
    - Ejemplos de código
 
-8. **RESUMEN_EJECUTIVO.md**
+9. **RESUMEN_EJECUTIVO.md**
    - Este archivo
    - Resumen para presentación
+
+10. **VERIFICACION_COMPLETA.md**
+   - Verificación de todos los requisitos
+   - Inventario completo de archivos
+   - Validación 100% cumplimiento
 
 ---
 
@@ -123,7 +137,7 @@
 
 ### Instalación
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn yfinance scipy textblob jupyter
+pip install pandas numpy matplotlib seaborn scikit-learn yfinance scipy textblob jupyter beautifulsoup4 requests
 ```
 
 ### Ejecutar Notebooks
@@ -133,7 +147,12 @@ pip install pandas numpy matplotlib seaborn scikit-learn yfinance scipy textblob
 jupyter notebook sistema_recomendacion_20M.ipynb
 ```
 
-**Análisis de Sentimiento:**
+**Análisis de Sentimiento - Arequipa (DESTACADO):**
+```bash
+jupyter notebook analisis_sentimiento_arequipa.ipynb
+```
+
+**Análisis de Sentimiento General:**
 ```bash
 jupyter notebook analisis_sentimiento.ipynb
 ```
@@ -233,14 +252,17 @@ jupyter notebook prediccion_oro_9M.ipynb
 ### 1. Sistema de Recomendación
 **"Desarrollamos un sistema que procesa 20 millones de interacciones para recomendar productos financieros personalizados en menos de 100 milisegundos, usando filtrado colaborativo como Netflix o Amazon."**
 
-### 2. Análisis de Sentimiento
+### 2. Análisis de Sentimiento - Enfoque LOCAL Arequipa
+**"Desarrollamos un sistema de web scraping para analizar noticias reales sobre las 5 principales minas de Arequipa (Cerro Verde, Caylloma, Arcata, Orcopampa, Inmaculada), correlacionando el sentimiento en español con los precios de oro, plata y cobre. Incluye análisis del impacto económico regional con datos de canon minero (800M PEN), empleo (15,000+ trabajadores) y contribución al PIB (35%)."**
+
+### 3. Análisis de Sentimiento - General
 **"Analizamos el sentimiento de noticias, redes sociales y foros, correlacionándolo con indicadores económicos como el tipo de cambio USD/PEN y riesgo país, logrando un R² superior a 0.85 en predicción de precios."**
 
-### 3. Big Data
+### 4. Big Data
 **"El sistema procesa más de 40 millones de registros totales, optimizado para velocidad con técnicas de matrices esparsas y vectorización, demostrando capacidad de escalar a nivel empresarial."**
 
-### 4. Valor Real
-**"Aplicable a robo-advisors, trading algorítmico, gestión de riesgo y análisis de mercado, con datos reales verificables de Yahoo Finance y metodología basada en papers académicos y cases de KNIME."**
+### 5. Valor Real
+**"Aplicable a robo-advisors, trading algorítmico, gestión de riesgo y análisis de mercado, con datos reales verificables de Yahoo Finance y metodología basada en papers académicos y cases de KNIME. El enfoque LOCAL en minería de Arequipa añade valor regional y demuestra capacidad de análisis contextualizado."**
 
 ---
 
