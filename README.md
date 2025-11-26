@@ -107,6 +107,8 @@ Modelo de predicción multi-factor con **9+ millones de datos** combinando 18 fa
 ModeloBIteoriaexamen3/
 ├── sistema_recomendacion_20M.ipynb       # 🥇 Sistema de recomendación (20M+ datos)
 ├── analisis_sentimiento_arequipa.ipynb  # 🥈 ⭐ Análisis sentimiento AREQUIPA + Web Scraping
+├── sentimiento_apis_reales.ipynb         # 🆕 ⭐⭐ APIs REALES (NewsAPI, Alpha Vantage, Reddit, Twitter)
+├── app_streamlit.py                      # 🆕 🎨 Dashboard interactivo con Streamlit
 ├── analisis_sentimiento.ipynb            # 🥉 Análisis de sentimiento general
 ├── prediccion_oro_9M.ipynb               # Predicción multi-factor (9M+ datos)
 ├── prediccion_oro.ipynb                  # Predicción básica del oro
@@ -114,6 +116,7 @@ ModeloBIteoriaexamen3/
 ├── DOCUMENTACION_COMPLETA.md             # Documentación técnica completa
 ├── RESUMEN_EJECUTIVO.md                  # Resumen para presentación
 ├── VERIFICACION_COMPLETA.md              # Verificación de requisitos
+├── FUENTES_DE_DATOS.md                   # 🆕 Explicación de fuentes de datos
 └── README.md                             # Este archivo
 ```
 
@@ -121,9 +124,14 @@ ModeloBIteoriaexamen3/
 
 ## 🚀 Instalación y Uso
 
-### Requisitos
+### Requisitos Base
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn yfinance scipy textblob jupyter beautifulsoup4 requests
+```
+
+### Requisitos para APIs REALES (NUEVO)
+```bash
+pip install newsapi-python alpha-vantage praw tweepy vaderSentiment streamlit plotly
 ```
 
 ### Ejecutar Notebooks
@@ -138,15 +146,106 @@ jupyter notebook sistema_recomendacion_20M.ipynb
 jupyter notebook analisis_sentimiento_arequipa.ipynb
 ```
 
-**3. Análisis de Sentimiento General:**
+**3. ⭐ NUEVO: Análisis con APIs REALES (NewsAPI, Alpha Vantage, Reddit, Twitter):**
+```bash
+jupyter notebook sentimiento_apis_reales.ipynb
+```
+
+**4. Análisis de Sentimiento General:**
 ```bash
 jupyter notebook analisis_sentimiento.ipynb
 ```
 
-**4. Predicción Multi-Factor:**
+**5. Predicción Multi-Factor:**
 ```bash
 jupyter notebook prediccion_oro_9M.ipynb
 ```
+
+### 🎨 Dashboard Interactivo con Streamlit (NUEVO)
+
+**Ejecutar Dashboard:**
+```bash
+streamlit run app_streamlit.py
+```
+
+Abre automáticamente en tu navegador: `http://localhost:8501`
+
+**Características del Dashboard:**
+- 📊 Visualización interactiva de datos en tiempo real
+- 📰 Análisis de sentimiento de noticias
+- 💰 Gráficos de precios de metales
+- 📈 Correlación sentimiento-precio
+- ⚙️ Configuración de fuentes de datos
+- 🎯 Métricas en tiempo real
+
+---
+
+## 🆕 APIS GRATUITAS PARA DATOS 100% REALES
+
+### Configuración de APIs (Tier FREE)
+
+#### 1. NewsAPI - Noticias de Medios
+- **URL:** https://newsapi.org/register
+- **Límite:** 100 requests/día, 100 artículos por request
+- **Total:** 10,000 artículos/día
+- **Fuentes:** Gestión.pe, El Comercio, La República, RPP
+- **Período:** Últimos 30 días
+
+#### 2. Alpha Vantage - Sentimiento con IA
+- **URL:** https://www.alphavantage.co/support/#api-key
+- **Límite:** 25 requests/día, 1000 noticias por request (usar &limit=1000)
+- **Total:** 25,000 noticias/día
+- **Extra:** Sentimiento ya calculado con IA (Bullish/Bearish/Neutral)
+- **Ventaja:** Análisis de sentimiento incluido
+
+#### 3. Reddit API (PRAW) - Comunidades
+- **URL:** https://www.reddit.com/prefs/apps
+- **Límite:** Ilimitado (60 requests/minuto)
+- **Subreddits:** r/Peru, r/Arequipa, r/mining, r/Gold, r/commodities
+- **Datos:** Posts, comentarios, upvotes
+
+#### 4. Twitter API v2 - Tiempo Real
+- **URL:** https://developer.twitter.com/en/portal/dashboard
+- **Límite:** 500,000 tweets/mes (Essential tier)
+- **Búsqueda:** Últimos 7 días
+- **Hashtags:** #MineríaArequipa, #CerroVerde, #MineríaPerú
+
+#### 5. Yahoo Finance (yfinance) - Precios
+- **Límite:** Ilimitado ♾️
+- **Costo:** 100% GRATIS
+- **Datos:** Oro, Plata, Cobre, índices, divisas
+- **Actualización:** Tiempo real
+
+### Capacidad Total Diaria
+- **NewsAPI:** 10,000 artículos
+- **Alpha Vantage:** 25,000 noticias
+- **Reddit:** ~5,000+ posts
+- **Twitter:** ~16,666 tweets/día (500K/mes)
+- **Yahoo Finance:** Ilimitado
+- **TOTAL:** 56,666+ registros de sentimiento/día
+
+### Instrucciones de Configuración
+
+1. **Obtener API Keys** (todas GRATIS):
+   - Visita cada URL de registro
+   - Crea cuenta con email
+   - Copia tu API key
+
+2. **Configurar en `sentimiento_apis_reales.ipynb`**:
+   ```python
+   API_KEYS = {
+       'newsapi': 'TU_API_KEY_AQUI',
+       'alphavantage': 'TU_API_KEY_AQUI',
+       'reddit': {
+           'client_id': 'TU_CLIENT_ID',
+           'client_secret': 'TU_CLIENT_SECRET',
+           'user_agent': 'ArequipaMiningAnalysis/1.0'
+       },
+       'twitter_bearer': 'TU_BEARER_TOKEN'
+   }
+   ```
+
+3. **Ejecutar notebook** y obtener datos REALES
 
 ---
 
